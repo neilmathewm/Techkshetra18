@@ -44,7 +44,7 @@ import QRCode from 'qrcode'
 require('firebase/firestore')
 export default {
   name: 'Registration',
-  props: ['id', 'event'],
+  props: ['id', 'maxparticipants'],
   data () {
     return {
       currentUser: null,
@@ -73,7 +73,7 @@ export default {
       })
     },
     addElement: function () {
-      if (this.participants.length < 4) {
+      if (this.participants.length < this.maxparticipants) {
         this.participants.push({
         displayName: null,
         mobno: null,
@@ -84,6 +84,7 @@ export default {
     }
   },
   mounted () {
+    console.log(this.maxparticipants)
     this.currentUser = firebase.auth().currentUser
     QRCode.toDataURL(firebase.auth().currentUser.uid, { errorCorrectionLevel: 'H' })
             .then(url => {

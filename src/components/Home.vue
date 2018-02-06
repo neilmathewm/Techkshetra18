@@ -25,6 +25,7 @@ h1, h2 {
   color:#D6D0D0;
 }
 
+
 .hello {
   margin-top: 5rem;
 }
@@ -33,6 +34,7 @@ img {
   max-width: 50%;
   margin-top: 15%;
   z-index:100;
+  min-height: 400px;
 }
 
 .powered {
@@ -53,6 +55,7 @@ img {
 @media screen and (max-width:480px){
   img {
     max-width: 90%;
+    min-height: 200px;
   }
 }
 

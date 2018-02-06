@@ -53,14 +53,14 @@ export default {
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="scss">
+<style lang="scss" scoped>
 $content: 'VIEW DETAILS';
 .container {
   margin-top:3rem;
   
   @media screen  and (max-width: 420px ){
     margin-right: 20%;
-  margin-left: 3.2rem !important;
+  margin-left: 10% !important;
   }
 }
 
@@ -82,8 +82,15 @@ h1, h2 {
   color:#D6D0D0;
 }
 
+
 h2 {
   font-size: 4rem;
+  @media screen and (max-width: 340px){
+     font-size: 2.25rem;
+  }
+   @media screen and (max-width: 425px) and (min-width: 341px) {
+     font-size: 2.75rem;
+   }
 }
 
 .thumb {
